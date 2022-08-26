@@ -10,11 +10,13 @@ import "./Main.css";
 import SubmissionForm from "./SubmissionForm";
 
 const Main = () => {
-  const [submissions, SetSubmissions] = useState<Submission[]>([]);
+  const [submissions, setSubmissions] = useState<Submission[]>([]);
   const { user } = useContext(AuthContext);
+  const [seeForm, setSeeForm] = useState<boolean>(false);
+
   const getAndSetSubmissions = (): void => {
     getAllSubmissions(user!.uid!).then((response) => {
-      SetSubmissions(response);
+      setSubmissions(response);
     });
   };
   const submitSubmission = (submission: Submission): void => {
@@ -24,13 +26,24 @@ const Main = () => {
   };
 
   useEffect(() => {
-    getAndSetSubmissions();
-  }, []);
+    if (user) {
+      getAndSetSubmissions();
+    }
+  }, [user]);
 
   return (
     <div className="Main">
-      <CardContainer submissions={submissions} />
-      <SubmissionForm onAdd={submitSubmission} />
+      {seeForm ? (
+        <button onClick={() => setSeeForm(false)}>Open Journal</button>
+      ) : (
+        <button onClick={() => setSeeForm(true)}>Add Entry</button>
+      )}
+
+      {seeForm ? (
+        <SubmissionForm onAdd={submitSubmission} />
+      ) : (
+        <CardContainer submissions={submissions} />
+      )}
     </div>
   );
 };
