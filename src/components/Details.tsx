@@ -6,6 +6,7 @@ import {
   deleteOneSubmission,
   getOneSubmission,
 } from "../service/submissionService";
+import BarChart from "./BarChart";
 import Card from "./Card";
 import "./Details.css";
 
@@ -57,7 +58,30 @@ const Details = () => {
           <p>Uncomfortable: {submission?.uncomfortable}</p>
           <p>Offended: {submission?.offended}</p>
           <p>Disturbed: {submission?.disturbed}</p>
-
+          <BarChart
+            chartData={[
+              submission.satisfaction,
+              submission.contentment,
+              submission.joy,
+              submission.relief,
+              submission.hopelessness,
+              submission.loneliness,
+              submission.disappointment,
+              submission.gloomy,
+              submission.anxiety,
+              submission.stressed,
+              submission.worried,
+              submission.doubtful,
+              submission.mad,
+              submission.annoyed,
+              submission.irritation,
+              submission.frustration,
+              submission.withdrawn,
+              submission.uncomfortable,
+              submission.offended,
+              submission.disturbed,
+            ]}
+          ></BarChart>
           <button
             onClick={() => deleteThisSubmission(submission._id!, user!.uid!)}
           >

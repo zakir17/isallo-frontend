@@ -1,6 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import Submission from "../models/Submission";
 import "./Card.css";
+import PieChart from "./PieChart";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+ChartJS.register(ArcElement, Tooltip, Legend);
 
 interface Props {
   submission: Submission;
@@ -35,18 +39,15 @@ const Card = ({ submission }: Props) => {
     submission.offended +
     submission.disturbed;
 
+  const cardData = [enjoyment, sadness, fear, anger, disgust];
+
   return (
     <div className="Card">
+      <PieChart cardData={cardData} />
       <p>Date: {submission.date}</p>
       <p>Activities: {submission.activity}</p>
       <p>How you felt: {submission.hDYFeel}</p>
       <p>Key Moments: {submission.keyMoments}</p>
-      <p>Your enjoyment level is: {enjoyment}</p>
-      <p>Your enjoyment level is: {sadness}</p>
-      <p>Your enjoyment level is: {fear}</p>
-      <p>Your enjoyment level is: {anger}</p>
-      <p>Your enjoyment level is: {disgust}</p>
-
       <Link to={`/${encodeURIComponent(submission._id!)}/details`}>
         See more
       </Link>
