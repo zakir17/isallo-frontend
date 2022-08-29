@@ -1,4 +1,5 @@
 export default interface Submission {
+  _id?: string;
   uid?: string;
   date: string;
   activity?: string;

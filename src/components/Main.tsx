@@ -40,7 +40,7 @@ const Main = () => {
       )}
 
       {seeForm ? (
-        <SubmissionForm onAdd={submitSubmission} />
+        <SubmissionForm onAdd={submitSubmission} setSeeForm={setSeeForm} />
       ) : (
         <CardContainer submissions={submissions} />
       )}

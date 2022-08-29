@@ -6,8 +6,9 @@ import "./SubmissionForm.css";
 
 interface Props {
   onAdd: (submission: Submission) => void;
+  setSeeForm: (setSeeForm: boolean) => void;
 }
-const SubmissionForm = ({ onAdd }: Props) => {
+const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
   const { user } = useContext(AuthContext);
 
   const [date, setDate] = useState("");
@@ -91,6 +92,7 @@ const SubmissionForm = ({ onAdd }: Props) => {
     setUncomfortable(0);
     setOffended(0);
     setDisturbed(0);
+    setSeeForm(false);
   };
 
   return (

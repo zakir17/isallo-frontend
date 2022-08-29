@@ -22,7 +22,7 @@ function App() {
           <Route path="/main" element={<Main />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/resources" element={<Resources />} />
-          <Route path="/:id/details" element={<Details />} />
+          <Route path="/:_id/details" element={<Details />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>

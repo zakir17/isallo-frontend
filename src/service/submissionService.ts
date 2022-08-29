@@ -8,12 +8,12 @@ export const getAllSubmissions = async (uid: string): Promise<Submission[]> => {
 };
 
 export const getOneSubmission = async (
-  id: string,
+  _id: string,
   uid: string
 ): Promise<Submission> => {
   return (
     await axios.get(
-      `${baseURL}/${encodeURIComponent(id)}/user/${encodeURIComponent(uid)}`
+      `${baseURL}/${encodeURIComponent(_id)}/user/${encodeURIComponent(uid)}`
     )
   ).data;
 };
