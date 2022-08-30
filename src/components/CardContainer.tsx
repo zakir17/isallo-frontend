@@ -20,6 +20,11 @@ const CardContainer = ({ submissions }: Props) => {
         text: "Enjoyment",
       },
     },
+    scales: {
+      xAxes: {
+        grid: { drawBorder: true, color: "black" },
+      },
+    },
   };
   const sadnessOptions = {
     responsive: true,
@@ -140,46 +145,147 @@ const CardContainer = ({ submissions }: Props) => {
   const userDataEnjoyment = {
     labels,
     datasets: [
-      { label: "Satisfaction", data: satisfaction },
-      { label: "Contentment", data: contentment },
-      { label: "Joy", data: joy },
-      { label: "Relief", data: relief },
+      {
+        label: "Satisfaction",
+        data: satisfaction,
+        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+      {
+        label: "Contentment",
+        data: contentment,
+        borderColor: "#049DC3",
+        backgroundColor: "#049DC3",
+      },
+      {
+        label: "Joy",
+        data: joy,
+        borderColor: "#FFF340",
+        backgroundColor: "#FFF340",
+      },
+      {
+        label: "Relief",
+        data: relief,
+        borderColor: "#25AE10",
+        backgroundColor: "#25AE10",
+      },
     ],
   };
   const userDataSadness = {
     labels,
     datasets: [
-      { label: "Hopelessness", data: hopelessness },
-      { label: "Loneliness", data: loneliness },
-      { label: "Disappointment", data: disappointment },
-      { label: "Gloomy", data: gloomy },
+      {
+        label: "Hopelessness",
+        data: hopelessness,
+        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+
+      {
+        label: "Loneliness",
+        data: loneliness,
+        borderColor: "#049DC3",
+        backgroundColor: "#049DC3",
+      },
+      {
+        label: "Disappointment",
+        data: disappointment,
+        borderColor: "#FFF340",
+        backgroundColor: "#FFF340",
+      },
+      {
+        label: "Gloomy",
+        data: gloomy,
+        borderColor: "#25AE10",
+        backgroundColor: "#25AE10",
+      },
     ],
   };
   const userDataFear = {
     labels,
     datasets: [
-      { label: "Anxiety", data: anxiety },
-      { label: "Stressed", data: stressed },
-      { label: "Worried", data: worried },
-      { label: "Doubtful", data: doubtful },
+      {
+        label: "Anxiety",
+        data: anxiety,
+        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+      {
+        label: "Stressed",
+        data: stressed,
+        borderColor: "#049DC3",
+        backgroundColor: "#049DC3",
+      },
+      {
+        label: "Worried",
+        data: worried,
+        borderColor: "#FFF340",
+        backgroundColor: "#FFF340",
+      },
+      {
+        label: "Doubtful",
+        data: doubtful,
+        borderColor: "#25AE10",
+        backgroundColor: "#25AE10",
+      },
     ],
   };
   const userDataAnger = {
     labels,
     datasets: [
-      { label: "Mad", data: mad },
-      { label: "Annoyed", data: annoyed },
-      { label: "Irritation", data: irritation },
-      { label: "Frustration", data: frustration },
+      {
+        label: "Mad",
+        data: mad,
+        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+      {
+        label: "Annoyed",
+        data: annoyed,
+        borderColor: "#049DC3",
+        backgroundColor: "#049DC3",
+      },
+      {
+        label: "Irritation",
+        data: irritation,
+        borderColor: "#FFF340",
+        backgroundColor: "#FFF340",
+      },
+      {
+        label: "Frustration",
+        data: frustration,
+        borderColor: "#25AE10",
+        backgroundColor: "#25AE10",
+      },
     ],
   };
   const userDataDisgust = {
     labels,
     datasets: [
-      { label: "Withdrawn", data: withdrawn },
-      { label: "Uncomfortable", data: uncomfortable },
-      { label: "Offended", data: offended },
-      { label: "Disturbed", data: disturbed },
+      {
+        label: "Withdrawn",
+        data: withdrawn,
+        borderColor: "rgb(255, 99, 132)",
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+      {
+        label: "Uncomfortable",
+        data: uncomfortable,
+        borderColor: "#049DC3",
+        backgroundColor: "#049DC3",
+      },
+      {
+        label: "Offended",
+        data: offended,
+        borderColor: "#FFF340",
+        backgroundColor: "#FFF340",
+      },
+      {
+        label: "Disturbed",
+        data: disturbed,
+        borderColor: "#25AE10",
+        backgroundColor: "#25AE10",
+      },
     ],
   };
 

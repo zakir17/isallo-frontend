@@ -1,0 +1,7 @@
+.Details .emotions {
+  display: flex;
+}
+
+.Details .emotions p {
+  margin: 5px;
+}

@@ -3,20 +3,16 @@ import AuthContext from "../context/AuthContext";
 import Submission from "../models/Submission";
 import { addOneSubmission } from "../service/submissionService";
 import "./SubmissionForm.css";
-
 interface Props {
   onAdd: (submission: Submission) => void;
   setSeeForm: (setSeeForm: boolean) => void;
 }
 const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
   const { user } = useContext(AuthContext);
-
   const [date, setDate] = useState("");
-
   const [activity, setActivity] = useState("");
   const [keyMoments, setKeyMoments] = useState("");
   const [hDYFeel, setHDYFeel] = useState("");
-
   const [satisfaction, setSatisfaction] = useState<number>(0);
   const [contentment, setContentment] = useState<number>(0);
   const [joy, setJoy] = useState<number>(0);
@@ -38,7 +34,6 @@ const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
   const [offended, setOffended] = useState<number>(0);
   const [disturbed, setDisturbed] = useState<number>(0);
   const [counter, setCounter] = useState(1);
-
   const handleSubmit = (e: FormEvent): void => {
     e.preventDefault();
     const submission = {
@@ -105,6 +100,7 @@ const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
             type="datetime-local"
             name="date"
             id="date"
+            required
             value={date}
             onChange={(e) => setDate(e.target.value)}
           />
@@ -148,7 +144,6 @@ const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
           />
         </>
       )}
-
       {counter === 4 && (
         <div>
           <label htmlFor="satisfaction slider">Satisfaction</label>
@@ -407,5 +402,4 @@ const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
     </form>
   );
 };
-
 export default SubmissionForm;

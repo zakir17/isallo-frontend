@@ -119,7 +119,7 @@ const BarChart = ({ chartData }: Props) => {
     ],
   };
   return (
-    <div style={{ width: "2000px", height: "2000px" }}>
+    <div style={{ width: "1000px", height: "500px" }}>
       <Bar data={userData}></Bar>
     </div>
   );
