@@ -14,15 +14,38 @@ const CardContainer = ({ submissions }: Props) => {
     plugins: {
       legend: {
         position: "top" as const,
+        labels: {
+          color: "black",
+          font: {
+            size: 15,
+            family: "'Comfortaa', cursive",
+          },
+        },
       },
       title: {
         display: true,
         text: "Enjoyment",
+        color: "red",
       },
     },
     scales: {
-      xAxes: {
-        grid: { drawBorder: true, color: "black" },
+      x: {
+        ticks: {
+          color: "black",
+          font: {
+            size: 10,
+            family: "'Comfortaa', cursive",
+          },
+        },
+      },
+      y: {
+        ticks: {
+          color: "blue",
+          font: {
+            size: 10,
+            family: "'Comfortaa', cursive",
+          },
+        },
       },
     },
   };
@@ -30,23 +53,80 @@ const CardContainer = ({ submissions }: Props) => {
     responsive: true,
     plugins: {
       legend: {
-        position: "top" as const,
+        position: "bottom" as const,
+        labels: {
+          color: "black",
+          font: {
+            size: 15,
+            family: "'Comfortaa', cursive",
+          },
+        },
       },
       title: {
         display: true,
         text: "Sadness",
+        color: "red",
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          color: "black",
+          font: {
+            size: 10,
+            family: "'Comfortaa', cursive",
+          },
+        },
+      },
+      y: {
+        ticks: {
+          color: "blue",
+          font: {
+            size: 10,
+            family: "'Comfortaa', cursive",
+          },
+        },
       },
     },
   };
+
   const fearOptions = {
     responsive: true,
     plugins: {
       legend: {
-        position: "top" as const,
+        position: "right" as const,
+        labels: {
+          color: "black",
+          font: {
+            size: 15,
+            family: "'Comfortaa', cursive",
+          },
+        },
       },
       title: {
         display: true,
         text: "Fear",
+        color: "red",
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          color: "black",
+          font: {
+            size: 10,
+            family: "'Comfortaa', cursive",
+          },
+        },
+      },
+      y: {
+        ticks: {
+          color: "blue",
+          font: {
+            size: 10,
+            family: "'Comfortaa', cursive",
+          },
+        },
       },
     },
   };
@@ -54,11 +134,39 @@ const CardContainer = ({ submissions }: Props) => {
     responsive: true,
     plugins: {
       legend: {
-        position: "top" as const,
+        position: "left" as const,
+        labels: {
+          color: "black",
+          font: {
+            size: 15,
+            family: "'Comfortaa', cursive",
+          },
+        },
       },
       title: {
         display: true,
         text: "Anger",
+        color: "red",
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          color: "black",
+          font: {
+            size: 10,
+            family: "'Comfortaa', cursive",
+          },
+        },
+      },
+      y: {
+        ticks: {
+          color: "blue",
+          font: {
+            size: 10,
+            family: "'Comfortaa', cursive",
+          },
+        },
       },
     },
   };
@@ -67,10 +175,38 @@ const CardContainer = ({ submissions }: Props) => {
     plugins: {
       legend: {
         position: "top" as const,
+        labels: {
+          color: "black",
+          font: {
+            size: 15,
+            family: "'Comfortaa', cursive",
+          },
+        },
       },
       title: {
         display: true,
         text: "Disgust",
+        color: "red",
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          color: "black",
+          font: {
+            size: 10,
+            family: "'Comfortaa', cursive",
+          },
+        },
+      },
+      y: {
+        ticks: {
+          color: "blue",
+          font: {
+            size: 10,
+            family: "'Comfortaa', cursive",
+          },
+        },
       },
     },
   };
@@ -332,6 +468,11 @@ const CardContainer = ({ submissions }: Props) => {
         onClick={() => setShowDisgust(!showDisgust)}
       />
       <label htmlFor="disgust">Disgust</label>
+
+      <div className="tooltip">
+        <i className="fa-solid fa-info"></i>
+        <span className="tooltiptext">Tooltip text</span>
+      </div>
 
       {showEnjoyment && (
         <div>

@@ -97,7 +97,7 @@ const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
         <>
           <label htmlFor="date">Date</label>
           <input
-            type="datetime-local"
+            type="date"
             name="date"
             id="date"
             required

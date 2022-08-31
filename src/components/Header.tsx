@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import SubmissionForm from "./SubmissionForm";
+import logoUrl from "../assets/isallo-bright-text-logo.png";
 
 const Header = () => {
   const [seeNav, setSeeNav] = useState<boolean>(false);
@@ -9,7 +10,9 @@ const Header = () => {
     <div className="Header">
       <header>
         <h1>
-          <Link to="/">isallo</Link>
+          <Link to="/">
+            <img src={logoUrl} alt="logo" />
+          </Link>
         </h1>
         <nav>
           {seeNav ? (
