@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Radar } from "react-chartjs-2";
 import Submission from "../models/Submission";
 import Card from "./Card";
 import "./CardContainer.css";
 import LineChart from "./LineChart";
+import RadarChart from "./RadarChart";
 
 interface Props {
   submissions: Submission[];
@@ -17,7 +19,7 @@ const CardContainer = ({ submissions }: Props) => {
         labels: {
           color: "black",
           font: {
-            size: 15,
+            size: 12,
             family: "'Comfortaa', cursive",
           },
         },
@@ -25,7 +27,11 @@ const CardContainer = ({ submissions }: Props) => {
       title: {
         display: true,
         text: "Enjoyment",
-        color: "red",
+        color: "black",
+        font: {
+          size: 20,
+          family: "'Comfortaa', cursive",
+        },
       },
     },
     scales: {
@@ -40,7 +46,7 @@ const CardContainer = ({ submissions }: Props) => {
       },
       y: {
         ticks: {
-          color: "blue",
+          color: "black",
           font: {
             size: 10,
             family: "'Comfortaa', cursive",
@@ -53,11 +59,11 @@ const CardContainer = ({ submissions }: Props) => {
     responsive: true,
     plugins: {
       legend: {
-        position: "bottom" as const,
+        position: "top" as const,
         labels: {
           color: "black",
           font: {
-            size: 15,
+            size: 12,
             family: "'Comfortaa', cursive",
           },
         },
@@ -65,7 +71,11 @@ const CardContainer = ({ submissions }: Props) => {
       title: {
         display: true,
         text: "Sadness",
-        color: "red",
+        color: "black",
+        font: {
+          size: 20,
+          family: "'Comfortaa', cursive",
+        },
       },
     },
     scales: {
@@ -80,7 +90,7 @@ const CardContainer = ({ submissions }: Props) => {
       },
       y: {
         ticks: {
-          color: "blue",
+          color: "black",
           font: {
             size: 10,
             family: "'Comfortaa', cursive",
@@ -94,11 +104,11 @@ const CardContainer = ({ submissions }: Props) => {
     responsive: true,
     plugins: {
       legend: {
-        position: "right" as const,
+        position: "top" as const,
         labels: {
           color: "black",
           font: {
-            size: 15,
+            size: 12,
             family: "'Comfortaa', cursive",
           },
         },
@@ -106,7 +116,11 @@ const CardContainer = ({ submissions }: Props) => {
       title: {
         display: true,
         text: "Fear",
-        color: "red",
+        color: "black",
+        font: {
+          size: 20,
+          family: "'Comfortaa', cursive",
+        },
       },
     },
     scales: {
@@ -121,7 +135,7 @@ const CardContainer = ({ submissions }: Props) => {
       },
       y: {
         ticks: {
-          color: "blue",
+          color: "black",
           font: {
             size: 10,
             family: "'Comfortaa', cursive",
@@ -134,11 +148,11 @@ const CardContainer = ({ submissions }: Props) => {
     responsive: true,
     plugins: {
       legend: {
-        position: "left" as const,
+        position: "top" as const,
         labels: {
           color: "black",
           font: {
-            size: 15,
+            size: 12,
             family: "'Comfortaa', cursive",
           },
         },
@@ -146,7 +160,11 @@ const CardContainer = ({ submissions }: Props) => {
       title: {
         display: true,
         text: "Anger",
-        color: "red",
+        color: "black",
+        font: {
+          size: 20,
+          family: "'Comfortaa', cursive",
+        },
       },
     },
     scales: {
@@ -161,7 +179,7 @@ const CardContainer = ({ submissions }: Props) => {
       },
       y: {
         ticks: {
-          color: "blue",
+          color: "black",
           font: {
             size: 10,
             family: "'Comfortaa', cursive",
@@ -178,7 +196,7 @@ const CardContainer = ({ submissions }: Props) => {
         labels: {
           color: "black",
           font: {
-            size: 15,
+            size: 12,
             family: "'Comfortaa', cursive",
           },
         },
@@ -186,7 +204,11 @@ const CardContainer = ({ submissions }: Props) => {
       title: {
         display: true,
         text: "Disgust",
-        color: "red",
+        color: "black",
+        font: {
+          size: 20,
+          family: "'Comfortaa', cursive",
+        },
       },
     },
     scales: {
@@ -201,7 +223,7 @@ const CardContainer = ({ submissions }: Props) => {
       },
       y: {
         ticks: {
-          color: "blue",
+          color: "black",
           font: {
             size: 10,
             family: "'Comfortaa', cursive",
@@ -424,6 +446,229 @@ const CardContainer = ({ submissions }: Props) => {
       },
     ],
   };
+  const satisfactionTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.satisfaction));
+    return total;
+  };
+  const contentmentTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.contentment));
+    return total;
+  };
+  const joyTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.joy));
+    return total;
+  };
+  const reliefTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.relief));
+    return total;
+  };
+  const hopelessnessTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.hopelessness));
+    return total;
+  };
+  const lonelinessTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.loneliness));
+    return total;
+  };
+  const disappointmentTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.disappointment));
+    return total;
+  };
+  const gloomyTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.gloomy));
+    return total;
+  };
+  const anxietyTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.anxiety));
+    return total;
+  };
+  const stressedTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.stressed));
+    return total;
+  };
+  const worriedTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.worried));
+    return total;
+  };
+  const doubtfulTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.doubtful));
+    return total;
+  };
+  const madTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.mad));
+    return total;
+  };
+  const annoyedTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.annoyed));
+    return total;
+  };
+  const irritationTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.irritation));
+    return total;
+  };
+  const frustrationTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.frustration));
+    return total;
+  };
+  const withdrawnTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.withdrawn));
+    return total;
+  };
+  const uncomfortableTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.uncomfortable));
+    return total;
+  };
+  const offendedTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.offended));
+    return total;
+  };
+  const disturbedTotal = (submissions: Submission[]): number => {
+    let total = 0;
+    submissions.forEach((submission) => (total += submission.disturbed));
+    return total;
+  };
+  const enjoymentTotal =
+    satisfactionTotal(submissions) +
+    contentmentTotal(submissions) +
+    joyTotal(submissions) +
+    reliefTotal(submissions);
+  const sadnessTotal =
+    hopelessnessTotal(submissions) +
+    lonelinessTotal(submissions) +
+    disappointmentTotal(submissions) +
+    gloomyTotal(submissions);
+  const fearTotal =
+    anxietyTotal(submissions) +
+    stressedTotal(submissions) +
+    worriedTotal(submissions) +
+    doubtfulTotal(submissions);
+  const angerTotal =
+    madTotal(submissions) +
+    annoyedTotal(submissions) +
+    irritationTotal(submissions) +
+    frustrationTotal(submissions);
+  const disgustTotal =
+    withdrawnTotal(submissions) +
+    uncomfortableTotal(submissions) +
+    offendedTotal(submissions) +
+    disturbedTotal(submissions);
+  const radarBroadData = {
+    labels: ["Enjoyment", "Sadness", "Fear", "Anger", "Disgusted"],
+    datasets: [
+      {
+        label: "Average",
+        data: [
+          enjoymentTotal / submissions.length,
+          sadnessTotal / submissions.length,
+          fearTotal / submissions.length,
+          angerTotal / submissions.length,
+          disgustTotal / submissions.length,
+        ],
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1,
+      },
+      {
+        label: "Total",
+        data: [
+          enjoymentTotal,
+          sadnessTotal,
+          fearTotal,
+          angerTotal,
+          disgustTotal,
+        ],
+        backgroundColor: "rgba(255, 99, 50, 0.2)",
+        borderColor: "rgba(255, 99, 75, 1)",
+        borderWidth: 1,
+      },
+    ],
+  };
+  const radarSpecificData = {
+    labels: [
+      "Satisfaction",
+      "Contentment",
+      "Joy",
+      "Relief",
+      "Hopelessness",
+      "Loneliness",
+      "Disappointment",
+      "Gloomy",
+      "Anxiety",
+      "Stressed",
+      "Worried",
+      "Doubtful",
+      "Mad",
+      "Annoyed",
+      "Irritation",
+      "Frustration",
+      "Withdrawn",
+      "Uncomfortable",
+      "Offended",
+      "Disturbed",
+    ],
+    datasets: [
+      {
+        label: "Average",
+        data: [
+          satisfactionTotal(submissions),
+          contentmentTotal(submissions),
+          joyTotal(submissions),
+          reliefTotal(submissions),
+          hopelessnessTotal(submissions),
+          lonelinessTotal(submissions),
+          disappointmentTotal(submissions),
+          gloomyTotal(submissions),
+          anxietyTotal(submissions),
+          stressedTotal(submissions),
+          worriedTotal(submissions),
+          doubtfulTotal(submissions),
+          madTotal(submissions),
+          annoyedTotal(submissions),
+          irritationTotal(submissions),
+          frustrationTotal(submissions),
+          withdrawnTotal(submissions),
+          uncomfortableTotal(submissions),
+          offendedTotal(submissions),
+          disturbedTotal(submissions),
+        ],
+        backgroundColor: "rgba(255, 99, 132, 0.2)",
+        borderColor: "rgba(255, 99, 132, 1)",
+        borderWidth: 1,
+      },
+      {
+        label: "Total",
+        data: [
+          enjoymentTotal,
+          sadnessTotal,
+          fearTotal,
+          angerTotal,
+          disgustTotal,
+        ],
+        backgroundColor: "rgba(255, 99, 50, 0.2)",
+        borderColor: "rgba(255, 99, 75, 1)",
+        borderWidth: 1,
+      },
+    ],
+  };
 
   const [showEnjoyment, setShowEnjoyment] = useState(true);
   const [showSadness, setShowSadness] = useState(false);
@@ -471,25 +716,81 @@ const CardContainer = ({ submissions }: Props) => {
 
       <div className="tooltip">
         <i className="fa-solid fa-info"></i>
-        <span className="tooltiptext">Tooltip text</span>
+        <span className="tooltiptext">
+          These line graphs show emotional trends over time.
+        </span>
       </div>
 
       {showEnjoyment && (
-        <div>
-          <h2>Enjoyment Trendline</h2>
+        <div
+          style={{
+            width: "500px",
+            height: "250px",
+            backgroundColor: "rgba(243, 231, 165, 0.6)",
+          }}
+        >
           <LineChart chartData={userDataEnjoyment} options={enjoymentOptions} />
         </div>
       )}
       {showSadness && (
-        <LineChart chartData={userDataSadness} options={sadnessOptions} />
+        <div
+          style={{
+            width: "500px",
+            height: "250px",
+            backgroundColor: "rgba(110, 168, 211, 0.6)",
+          }}
+        >
+          <LineChart chartData={userDataSadness} options={sadnessOptions} />
+        </div>
       )}
-      {showFear && <LineChart chartData={userDataFear} options={fearOptions} />}
+      {showFear && (
+        <div
+          style={{
+            width: "500px",
+            height: "250px",
+            backgroundColor: "rgba(64, 96, 93, 0.6)",
+          }}
+        >
+          <LineChart chartData={userDataFear} options={fearOptions} />
+        </div>
+      )}
       {showAnger && (
-        <LineChart chartData={userDataAnger} options={angerOptions} />
+        <div
+          style={{
+            width: "500px",
+            height: "250px",
+            backgroundColor: "rgba(194, 116, 108, 0.6)",
+          }}
+        >
+          <LineChart chartData={userDataAnger} options={angerOptions} />
+        </div>
       )}
       {showDisgust && (
-        <LineChart chartData={userDataDisgust} options={disgustOptions} />
+        <div
+          style={{
+            width: "500px",
+            height: "250px",
+            backgroundColor: "rgba(235, 179, 155, 0.6)",
+          }}
+        >
+          <LineChart chartData={userDataDisgust} options={disgustOptions} />
+        </div>
       )}
+
+      <div>
+        <RadarChart chartData={radarBroadData} />
+        <div className="tooltip">
+          <i className="fa-solid fa-paperclip"></i>
+          <span className="tooltiptext">These radar charts show</span>
+        </div>
+      </div>
+      <div>
+        <RadarChart chartData={radarSpecificData} />
+        <div className="tooltip">
+          <i className="fa-solid fa-paperclip"></i>
+          <span className="tooltiptext">These radar charts show</span>
+        </div>
+      </div>
       {submissions.map((item) => (
         <Card submission={item} />
       ))}
