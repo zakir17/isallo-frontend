@@ -1,4 +1,15 @@
+/* resets */
+body {
+  margin: 20px;
+  padding: 0;
+}
+
 body {
   font-family: "Comfortaa", cursive;
   font-weight: 600;
+
+  background-image: url(../src/assets/mountains.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }

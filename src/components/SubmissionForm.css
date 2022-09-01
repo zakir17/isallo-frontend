@@ -1,0 +1,36 @@
+.SubmissionForm .form1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.SubmissionForm .form1 #date {
+  width: 10%;
+  text-align: center;
+}
+
+.SubmissionForm .form2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.SubmissionForm .form3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.SubmissionForm .form4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SubmissionForm .form4 .sliderColumn {
+  display: flex;
+  flex-direction: column;
+}
+.SubmissionForm .form4 .sliderColumn input {
+  margin: 10px;
+}

@@ -36,3 +36,22 @@
   visibility: visible;
   opacity: 1;
 }
+
+.CardContainer .lineGraphsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.CardContainer .linegraph {
+  margin: 10px;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.CardContainer .radarContainer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: rgba(251, 244, 237, 0.7);
+  border-radius: 30px;
+}

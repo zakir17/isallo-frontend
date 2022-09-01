@@ -42,15 +42,17 @@ const Card = ({ submission }: Props) => {
   const cardData = [enjoyment, sadness, fear, anger, disgust];
 
   return (
-    <div className="Card">
+    <div className="card">
       <PieChart cardData={cardData} />
-      <p>Date: {submission.date}</p>
-      <p>Activities: {submission.activity}</p>
-      <p>How you felt: {submission.hDYFeel}</p>
-      <p>Key Moments: {submission.keyMoments}</p>
-      <Link to={`/${encodeURIComponent(submission._id!)}/details`}>
-        See more
-      </Link>
+      <div>
+        <p>Date: {submission.date}</p>
+        <p>Activities: {submission.activity}</p>
+        <p>How you felt: {submission.hDYFeel}</p>
+        <p>Key Moments: {submission.keyMoments}</p>
+        <Link to={`/${encodeURIComponent(submission._id!)}/details`}>
+          See more
+        </Link>
+      </div>
     </div>
   );
 };

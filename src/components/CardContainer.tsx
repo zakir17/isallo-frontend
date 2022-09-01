@@ -702,118 +702,129 @@ const CardContainer = ({ submissions }: Props) => {
   const [showDisgust, setShowDisgust] = useState(false);
   return (
     <div className="CardContainer">
-      <input
-        type="checkbox"
-        name="enjoyment"
-        id="enjoyment"
-        defaultChecked={true}
-        onClick={() => setShowEnjoyment(!showEnjoyment)}
-      />
-      <label htmlFor="enjoyment">Enjoyment</label>
-      <input
-        type="checkbox"
-        name="sadness"
-        id="sadness"
-        onClick={() => setShowSadness(!showSadness)}
-      />
-      <label htmlFor="sadness">Sadness</label>
-      <input
-        type="checkbox"
-        name="fear"
-        id="fear"
-        onClick={() => setShowFear(!showFear)}
-      />
-      <label htmlFor="fear">Fear</label>
-      <input
-        type="checkbox"
-        name="anger"
-        id="anger"
-        onClick={() => setShowAnger(!showAnger)}
-      />
-      <label htmlFor="anger">Anger</label>
-      <input
-        type="checkbox"
-        name="disgust"
-        id="disgust"
-        onClick={() => setShowDisgust(!showDisgust)}
-      />
-      <label htmlFor="disgust">Disgust</label>
-
+      <div>
+        <input
+          type="checkbox"
+          name="enjoyment"
+          id="enjoyment"
+          defaultChecked={true}
+          onClick={() => setShowEnjoyment(!showEnjoyment)}
+        />
+        <label htmlFor="enjoyment">Enjoyment</label>
+        <input
+          type="checkbox"
+          name="sadness"
+          id="sadness"
+          onClick={() => setShowSadness(!showSadness)}
+        />
+        <label htmlFor="sadness">Sadness</label>
+        <input
+          type="checkbox"
+          name="fear"
+          id="fear"
+          onClick={() => setShowFear(!showFear)}
+        />
+        <label htmlFor="fear">Fear</label>
+        <input
+          type="checkbox"
+          name="anger"
+          id="anger"
+          onClick={() => setShowAnger(!showAnger)}
+        />
+        <label htmlFor="anger">Anger</label>
+        <input
+          type="checkbox"
+          name="disgust"
+          id="disgust"
+          onClick={() => setShowDisgust(!showDisgust)}
+        />
+        <label htmlFor="disgust">Disgust</label>
+      </div>
       <div className="tooltip">
         <i className="fa-solid fa-info"></i>
         <span className="tooltiptext">
           These line graphs show emotional trends over time.
         </span>
       </div>
-
-      {showEnjoyment && (
-        <div
-          style={{
-            width: "500px",
-            height: "250px",
-            backgroundColor: "rgba(243, 231, 165, 0.6)",
-          }}
-        >
-          <LineChart chartData={userDataEnjoyment} options={enjoymentOptions} />
-        </div>
-      )}
-      {showSadness && (
-        <div
-          style={{
-            width: "500px",
-            height: "250px",
-            backgroundColor: "rgba(110, 168, 211, 0.6)",
-          }}
-        >
-          <LineChart chartData={userDataSadness} options={sadnessOptions} />
-        </div>
-      )}
-      {showFear && (
-        <div
-          style={{
-            width: "500px",
-            height: "250px",
-            backgroundColor: "rgba(64, 96, 93, 0.6)",
-          }}
-        >
-          <LineChart chartData={userDataFear} options={fearOptions} />
-        </div>
-      )}
-      {showAnger && (
-        <div
-          style={{
-            width: "500px",
-            height: "250px",
-            backgroundColor: "rgba(194, 116, 108, 0.6)",
-          }}
-        >
-          <LineChart chartData={userDataAnger} options={angerOptions} />
-        </div>
-      )}
-      {showDisgust && (
-        <div
-          style={{
-            width: "500px",
-            height: "250px",
-            backgroundColor: "rgba(235, 179, 155, 0.6)",
-          }}
-        >
-          <LineChart chartData={userDataDisgust} options={disgustOptions} />
-        </div>
-      )}
-
-      <div>
-        <RadarChart chartData={radarBroadData} />
-        <div className="tooltip">
-          <i className="fa-solid fa-paperclip"></i>
-          <span className="tooltiptext">These radar charts show</span>
-        </div>
+      <div className="lineGraphsContainer">
+        {showEnjoyment && (
+          <div
+            className="linegraph"
+            style={{
+              width: "500px",
+              height: "250px",
+              backgroundColor: "rgba(243, 231, 165, 0.6)",
+            }}
+          >
+            <LineChart
+              chartData={userDataEnjoyment}
+              options={enjoymentOptions}
+            />
+          </div>
+        )}
+        {showSadness && (
+          <div
+            className="linegraph"
+            style={{
+              width: "500px",
+              height: "250px",
+              backgroundColor: "rgba(110, 168, 211, 0.6)",
+            }}
+          >
+            <LineChart chartData={userDataSadness} options={sadnessOptions} />
+          </div>
+        )}
+        {showFear && (
+          <div
+            className="linegraph"
+            style={{
+              width: "500px",
+              height: "250px",
+              backgroundColor: "rgba(64, 96, 93, 0.6)",
+            }}
+          >
+            <LineChart chartData={userDataFear} options={fearOptions} />
+          </div>
+        )}
+        {showAnger && (
+          <div
+            className="linegraph"
+            style={{
+              width: "500px",
+              height: "250px",
+              backgroundColor: "rgba(194, 116, 108, 0.6)",
+            }}
+          >
+            <LineChart chartData={userDataAnger} options={angerOptions} />
+          </div>
+        )}
+        {showDisgust && (
+          <div
+            className="linegraph"
+            style={{
+              width: "500px",
+              height: "250px",
+              backgroundColor: "rgba(235, 179, 155, 0.6)",
+            }}
+          >
+            <LineChart chartData={userDataDisgust} options={disgustOptions} />
+          </div>
+        )}
       </div>
-      <div>
-        <RadarChart chartData={radarSpecificData} />
-        <div className="tooltip">
-          <i className="fa-solid fa-paperclip"></i>
-          <span className="tooltiptext">These radar charts show</span>
+      <div className="radarContainer">
+        <div>
+          <RadarChart chartData={radarBroadData} />
+          <div className="tooltip">
+            <i className="fa-solid fa-paperclip"></i>
+            <span className="tooltiptext">These radar charts show</span>
+          </div>
+        </div>
+        <div>
+          <RadarChart chartData={radarSpecificData} />
+          <div className="tooltip">
+            <i className="fa-solid fa-paperclip"></i>
+            <span className="tooltiptext">These radar charts show</span>
+          </div>
         </div>
       </div>
       {submissions.map((item) => (
