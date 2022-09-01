@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import SubmissionForm from "./SubmissionForm";
-import logoUrl from "../assets/isallo-bright-text-logo.png";
+import logoUrl from "../assets/isallo-bright.svg";
 
 const Header = () => {
   const [seeNav, setSeeNav] = useState<boolean>(false);

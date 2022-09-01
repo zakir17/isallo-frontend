@@ -52,6 +52,8 @@ const CardContainer = ({ submissions }: Props) => {
             family: "'Comfortaa', cursive",
           },
         },
+        max: 10,
+        min: 0,
       },
     },
   };
@@ -89,6 +91,8 @@ const CardContainer = ({ submissions }: Props) => {
         },
       },
       y: {
+        max: 10,
+        min: 0,
         ticks: {
           color: "black",
           font: {
@@ -141,6 +145,8 @@ const CardContainer = ({ submissions }: Props) => {
             family: "'Comfortaa', cursive",
           },
         },
+        max: 10,
+        min: 0,
       },
     },
   };
@@ -185,6 +191,8 @@ const CardContainer = ({ submissions }: Props) => {
             family: "'Comfortaa', cursive",
           },
         },
+        max: 10,
+        min: 0,
       },
     },
   };
@@ -229,6 +237,8 @@ const CardContainer = ({ submissions }: Props) => {
             family: "'Comfortaa', cursive",
           },
         },
+        max: 10,
+        min: 0,
       },
     },
   };
