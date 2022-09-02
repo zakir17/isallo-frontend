@@ -47,11 +47,29 @@
   margin: 10px;
   padding: 30px;
   border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .CardContainer .radarContainer {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.CardContainer .radar {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 30px;
+  width: 550px;
   background-color: rgba(251, 244, 237, 0.7);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 30px;
+  margin: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .CardContainer .radarContainer {
+    flex-direction: row;
+  }
 }

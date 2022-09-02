@@ -700,6 +700,7 @@ const CardContainer = ({ submissions }: Props) => {
   const [showFear, setShowFear] = useState(false);
   const [showAnger, setShowAnger] = useState(false);
   const [showDisgust, setShowDisgust] = useState(false);
+
   return (
     <div className="CardContainer">
       <div>
@@ -812,14 +813,14 @@ const CardContainer = ({ submissions }: Props) => {
         )}
       </div>
       <div className="radarContainer">
-        <div>
+        <div className="radar broad">
           <RadarChart chartData={radarBroadData} />
           <div className="tooltip">
             <i className="fa-solid fa-paperclip"></i>
             <span className="tooltiptext">These radar charts show</span>
           </div>
         </div>
-        <div>
+        <div className=" radar specific">
           <RadarChart chartData={radarSpecificData} />
           <div className="tooltip">
             <i className="fa-solid fa-paperclip"></i>
@@ -827,9 +828,7 @@ const CardContainer = ({ submissions }: Props) => {
           </div>
         </div>
       </div>
-      {submissions.map((item) => (
-        <Card submission={item} />
-      ))}
+      {submissions.map((item) => <Card submission={item} />).reverse()}
     </div>
   );
 };
