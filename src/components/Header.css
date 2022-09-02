@@ -3,3 +3,24 @@
   width: 150px;
   display: inline-block;
 }
+
+.Header header {
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+
+.Header ul {
+  list-style: none;
+  display: flex;
+}
+
+.Header .fa-bars {
+  color: rgb(32, 69, 74);
+  height: 100%;
+  width: 100%;
+}
+
+.Header .fa-bars:hover {
+  cursor: pointer;
+}

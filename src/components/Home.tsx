@@ -8,16 +8,15 @@ import "./Home.css";
 
 const Home = () => {
   const { user } = useContext(AuthContext);
-
   return (
     <div className="Home">
-      {user ? (
-        <button onClick={() => signOut()}>Sign out</button>
-      ) : (
-        <button onClick={() => signInWithGoogle()}>Sign in</button>
-      )}
-
-      <Link to="/main">Main</Link>
+      <p>
+        Clarity is formed by wading through the mud, the murkiest waters of
+        life, and finding where the seemingly unrelated are intertwined.
+      </p>
+      <Link to="/main">
+        <button>Start Your Journey</button>
+      </Link>
     </div>
   );
 };

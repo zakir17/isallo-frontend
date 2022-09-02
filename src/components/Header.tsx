@@ -1,10 +1,13 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 import SubmissionForm from "./SubmissionForm";
 import logoUrl from "../assets/isallo-bright.svg";
+import { signInWithGoogle, signOut } from "../firebaseConfig";
+import AuthContext from "../context/AuthContext";
 
 const Header = () => {
+  const { user } = useContext(AuthContext);
   const [seeNav, setSeeNav] = useState<boolean>(false);
   return (
     <div className="Header">
@@ -16,9 +19,15 @@ const Header = () => {
         </h1>
         <nav>
           {seeNav ? (
-            <button onClick={() => setSeeNav(false)}>Close Nav</button>
+            <i
+              className="fa-solid fa-bars fa-3x"
+              onClick={() => setSeeNav(false)}
+            ></i>
           ) : (
-            <button onClick={() => setSeeNav(true)}>See Nav</button>
+            <i
+              className="fa-solid fa-bars fa-3x"
+              onClick={() => setSeeNav(true)}
+            ></i>
           )}
 
           {seeNav ? (
@@ -35,6 +44,11 @@ const Header = () => {
               <li>
                 <Link to="/">Home</Link>
               </li>
+              {user ? (
+                <a onClick={() => signOut()}>Sign out</a>
+              ) : (
+                <a onClick={() => signInWithGoogle()}>Sign in</a>
+              )}
             </ul>
           ) : (
             ""
