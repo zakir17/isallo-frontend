@@ -7,20 +7,34 @@
 .Header header {
   display: flex;
   justify-content: space-between;
-  align-items: top;
+  align-items: center;
 }
 
 .Header ul {
   list-style: none;
+  position: absolute;
   display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  right: 30px;
+  animation: mymove 1s infinite;
+}
+.Header ul li,
+a {
+  margin-left: 10px;
 }
 
 .Header .fa-bars {
   color: rgb(32, 69, 74);
   height: 100%;
   width: 100%;
+  align-items: center;
 }
 
 .Header .fa-bars:hover {
   cursor: pointer;
+  color: rgb(231, 12, 147);
+}
+
+@media screen and (min-width: 768px) {
 }
