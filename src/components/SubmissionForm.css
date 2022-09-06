@@ -5,48 +5,73 @@
   align-items: center;
 }
 
+.SubmissionForm label,
+h2,
+p {
+  color: rgb(32, 69, 74);
+}
+
 .SubmissionForm .form1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   background-color: rgba(251, 244, 237, 0.5);
-  padding: 30px;
+  padding: 40px;
   border-radius: 30px;
-  width: 65%;
+  width: 55%;
+  max-width: 700px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 1.5em;
 }
 .SubmissionForm .form1 #date {
   text-align: center;
-  margin: 10px;
+  margin-left: 10px;
+  background-color: rgba(251, 244, 237, 0.9);
 }
 
+.SubmissionForm .form1 div {
+  margin-bottom: 20px;
+}
+.SubmissionForm textarea {
+  margin-top: 10px;
+  background-color: rgba(251, 244, 237, 0.9);
+}
 .SubmissionForm .form2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: left;
   background-color: rgba(251, 244, 237, 0.5);
-  padding: 30px;
+  padding: 40px;
   border-radius: 30px;
-  width: 65%;
+  width: 55%;
+  max-width: 700px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 1.5em;
 }
+
 .SubmissionForm .form3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: LEFT;
   background-color: rgba(251, 244, 237, 0.5);
-  padding: 30px;
+  padding: 40px;
   border-radius: 30px;
-  width: 65%;
+  width: 55%;
+  max-width: 700px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 1.5em;
 }
 .SubmissionForm .form4 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: left;
   padding: 30px;
   border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .SubmissionForm .slider {
@@ -86,10 +111,47 @@
 .SubmissionForm .disgustColumn {
   background-color: rgba(235, 179, 155, 0.7);
 }
-/* 
-.SubmissionForm .form4 .sliderColumn input {
+
+.SubmissionForm .duelingButtons {
+  width: 55%;
+  max-width: 700px;
+  position: relative;
+}
+.SubmissionForm .duelingButtons .nxtBtn {
+  position: absolute;
+  right: 0;
+}
+.SubmissionForm .duelingButtons .backBtn {
+  position: absolute;
+  left: 0;
+}
+.SubmissionForm .duelingButtons .submitBtn {
+  position: absolute;
+  right: 0;
+}
+
+.SubmissionForm button {
   margin: 10px;
-} */
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: rgb(244, 218, 193);
+  background-color: rgb(32, 69, 74);
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.SubmissionForm button:hover {
+  background-color: rgb(96, 169, 214);
+  cursor: pointer;
+  color: rgb(32, 69, 74);
+}
+
+.SubmissionForm section {
+  width: 55%;
+  max-width: 700px;
+}
 
 @media screen and (min-width: 768px) {
   .SubmissionForm .form4 {

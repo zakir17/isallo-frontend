@@ -16,8 +16,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  right: 30px;
-  animation: mymove 1s infinite;
+  right: 20px;
 }
 .Header ul li,
 a {
@@ -33,7 +32,7 @@ a {
 
 .Header .fa-bars:hover {
   cursor: pointer;
-  color: rgb(231, 12, 147);
+  color: rgb(96, 169, 214);
 }
 
 @media screen and (min-width: 768px) {

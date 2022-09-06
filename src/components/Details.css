@@ -1,18 +1,24 @@
 .Details .emotions {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: left;
   flex-wrap: wrap;
+  width: 95%;
+  margin-bottom: 20px;
 }
 
 .Details .emotions p {
   margin: 5px;
 }
+.Details p {
+  color: black;
+}
 
 .Details .column {
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  padding: 30px;
+  padding: 15px;
   margin: 10px;
+  width: 165px;
 }
 
 .Details .enjoyment {
@@ -37,12 +43,12 @@
 
 .Details .barChart {
   width: 85%;
-
   background-color: rgba(251, 244, 237, 0.7);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 30px;
   padding: 30px;
   margin: 0, 20px;
+  max-width: 1000px;
 }
 
 .Details .chartAndEmotionsContainer {
@@ -56,7 +62,9 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 30px;
   padding: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  width: 85%;
+  max-width: 1000px;
 }
 
 .Details .textContainer {
@@ -67,9 +75,35 @@
 }
 
 .Details .textTopics {
-  font-weight: bold;
-  color: rgb(2, 34, 175);
+  font-weight: 800;
+  color: rgb(96, 169, 214);
+}
+
+.Details .deletebtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.Details button {
+  margin: 10px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: rgb(244, 218, 193);
+  background-color: rgb(32, 69, 74);
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.Details button:hover {
+  background-color: rgb(96, 169, 214);
+  color: rgb(32, 69, 74);
 }
 
 @media screen and (min-width: 768px) {
+  .Details .emotions {
+    justify-content: center;
+  }
 }

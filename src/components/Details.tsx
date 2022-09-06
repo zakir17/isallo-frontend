@@ -108,11 +108,13 @@ const Details = () => {
               ></BarChart>
             </div>
           </div>
-          <button
-            onClick={() => deleteThisSubmission(submission._id!, user!.uid!)}
-          >
-            Delete
-          </button>
+          <div className="deletebtn">
+            <button
+              onClick={() => deleteThisSubmission(submission._id!, user!.uid!)}
+            >
+              Delete Entry
+            </button>
+          </div>
         </div>
       )}
     </div>

@@ -316,26 +316,26 @@ const CardContainer = ({ submissions }: Props) => {
       {
         label: "Satisfaction",
         data: satisfaction,
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "rgb(194, 116, 108)",
+        backgroundColor: "rgb(194, 116, 108)",
       },
       {
         label: "Contentment",
         data: contentment,
-        borderColor: "#049DC3",
-        backgroundColor: "#049DC3",
+        borderColor: "rgb(110, 168, 211)",
+        backgroundColor: "rgb(110, 168, 211)",
       },
       {
         label: "Joy",
         data: joy,
-        borderColor: "#FFF340",
-        backgroundColor: "#FFF340",
+        borderColor: "rgb(235, 179, 155)",
+        backgroundColor: "rgb(235, 179, 155)",
       },
       {
         label: "Relief",
         data: relief,
-        borderColor: "#25AE10",
-        backgroundColor: "#25AE10",
+        borderColor: "rgb(64, 96, 93)",
+        backgroundColor: "rgb(64, 96, 93)",
       },
     ],
   };
@@ -345,27 +345,27 @@ const CardContainer = ({ submissions }: Props) => {
       {
         label: "Hopelessness",
         data: hopelessness,
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: " rgb(194, 116, 108)",
+        backgroundColor: " rgb(194, 116, 108)        ",
       },
 
       {
         label: "Loneliness",
         data: loneliness,
-        borderColor: "#049DC3",
-        backgroundColor: "#049DC3",
+        borderColor: "rgb(243, 231, 165)        ",
+        backgroundColor: " rgb(243, 231, 165)        ",
       },
       {
         label: "Disappointment",
         data: disappointment,
-        borderColor: "#FFF340",
-        backgroundColor: "#FFF340",
+        borderColor: "rgb(235, 179, 155)        ",
+        backgroundColor: "rgb(235, 179, 155)",
       },
       {
         label: "Gloomy",
         data: gloomy,
-        borderColor: "#25AE10",
-        backgroundColor: "#25AE10",
+        borderColor: "rgb(64, 96, 93)        ",
+        backgroundColor: "rgb(64, 96, 93)",
       },
     ],
   };
@@ -375,26 +375,26 @@ const CardContainer = ({ submissions }: Props) => {
       {
         label: "Anxiety",
         data: anxiety,
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "rgb(194, 116, 108)        ",
+        backgroundColor: "rgb(194, 116, 108)        ",
       },
       {
         label: "Stressed",
         data: stressed,
-        borderColor: "#049DC3",
-        backgroundColor: "#049DC3",
+        borderColor: "rgb(110, 168, 211)        ",
+        backgroundColor: "rgb(110, 168, 211)        ",
       },
       {
         label: "Worried",
         data: worried,
-        borderColor: "#FFF340",
-        backgroundColor: "#FFF340",
+        borderColor: " rgb(243, 231, 165)",
+        backgroundColor: " rgb(243, 231, 165)",
       },
       {
         label: "Doubtful",
         data: doubtful,
-        borderColor: "#25AE10",
-        backgroundColor: "#25AE10",
+        borderColor: "   rgb(235, 179, 155)",
+        backgroundColor: "   rgb(235, 179, 155)",
       },
     ],
   };
@@ -404,26 +404,26 @@ const CardContainer = ({ submissions }: Props) => {
       {
         label: "Mad",
         data: mad,
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "  rgb(235, 179, 155)        ",
+        backgroundColor: "  rgb(235, 179, 155)        ",
       },
       {
         label: "Annoyed",
         data: annoyed,
-        borderColor: "#049DC3",
-        backgroundColor: "#049DC3",
+        borderColor: " rgb(110, 168, 211)",
+        backgroundColor: " rgb(110, 168, 211)",
       },
       {
         label: "Irritation",
         data: irritation,
-        borderColor: "#FFF340",
-        backgroundColor: "#FFF340",
+        borderColor: "rgb(243, 231, 165)",
+        backgroundColor: "rgb(243, 231, 165)",
       },
       {
         label: "Frustration",
         data: frustration,
-        borderColor: "#25AE10",
-        backgroundColor: "#25AE10",
+        borderColor: " rgb(64, 96, 93)",
+        backgroundColor: " rgb(64, 96, 93)",
       },
     ],
   };
@@ -433,26 +433,26 @@ const CardContainer = ({ submissions }: Props) => {
       {
         label: "Withdrawn",
         data: withdrawn,
-        borderColor: "rgb(255, 99, 132)",
-        backgroundColor: "rgba(255, 99, 132, 0.5)",
+        borderColor: "rgb(194, 116, 108)        ",
+        backgroundColor: "rgb(194, 116, 108)        ",
       },
       {
         label: "Uncomfortable",
         data: uncomfortable,
-        borderColor: "#049DC3",
-        backgroundColor: "#049DC3",
+        borderColor: "rgb(110, 168, 211)",
+        backgroundColor: "rgb(110, 168, 211)",
       },
       {
         label: "Offended",
         data: offended,
-        borderColor: "#FFF340",
-        backgroundColor: "#FFF340",
+        borderColor: " rgb(243, 231, 165)",
+        backgroundColor: " rgb(243, 231, 165)",
       },
       {
         label: "Disturbed",
         data: disturbed,
-        borderColor: "#25AE10",
-        backgroundColor: "#25AE10",
+        borderColor: "rgb(64, 96, 93)",
+        backgroundColor: "rgb(64, 96, 93)",
       },
     ],
   };
@@ -703,50 +703,56 @@ const CardContainer = ({ submissions }: Props) => {
 
   return (
     <div className="CardContainer">
-      <div>
-        <input
-          type="checkbox"
-          name="enjoyment"
-          id="enjoyment"
-          defaultChecked={true}
-          onClick={() => setShowEnjoyment(!showEnjoyment)}
-        />
-        <label htmlFor="enjoyment">Enjoyment</label>
-        <input
-          type="checkbox"
-          name="sadness"
-          id="sadness"
-          onClick={() => setShowSadness(!showSadness)}
-        />
-        <label htmlFor="sadness">Sadness</label>
-        <input
-          type="checkbox"
-          name="fear"
-          id="fear"
-          onClick={() => setShowFear(!showFear)}
-        />
-        <label htmlFor="fear">Fear</label>
-        <input
-          type="checkbox"
-          name="anger"
-          id="anger"
-          onClick={() => setShowAnger(!showAnger)}
-        />
-        <label htmlFor="anger">Anger</label>
-        <input
-          type="checkbox"
-          name="disgust"
-          id="disgust"
-          onClick={() => setShowDisgust(!showDisgust)}
-        />
-        <label htmlFor="disgust">Disgust</label>
+      <h2>Trends </h2>
+      <div className="checkboxContainer">
+        <div>
+          <input
+            type="checkbox"
+            name="enjoyment"
+            id="enjoyment"
+            defaultChecked={true}
+            onClick={() => setShowEnjoyment(!showEnjoyment)}
+          />
+          <label htmlFor="enjoyment">Enjoyment</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="sadness"
+            id="sadness"
+            onClick={() => setShowSadness(!showSadness)}
+          />
+          <label htmlFor="sadness">Sadness</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="fear"
+            id="fear"
+            onClick={() => setShowFear(!showFear)}
+          />
+          <label htmlFor="fear">Fear</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="anger"
+            id="anger"
+            onClick={() => setShowAnger(!showAnger)}
+          />
+          <label htmlFor="anger">Anger</label>
+        </div>
+        <div>
+          <input
+            type="checkbox"
+            name="disgust"
+            id="disgust"
+            onClick={() => setShowDisgust(!showDisgust)}
+          />
+          <label htmlFor="disgust">Disgust</label>
+        </div>
       </div>
-      <div className="tooltip">
-        <i className="fa-solid fa-info"></i>
-        <span className="tooltiptext">
-          These line graphs show emotional trends over time.
-        </span>
-      </div>
+
       <div className="lineGraphsContainer">
         {showEnjoyment && (
           <div
@@ -757,6 +763,13 @@ const CardContainer = ({ submissions }: Props) => {
               backgroundColor: "rgba(243, 231, 165, 0.6)",
             }}
           >
+            <div className="tooltip">
+              <i className="fa-solid fa-circle-info"></i>
+              <span className="tooltiptext">
+                This line graph shows enjoyment trends over time.
+              </span>
+            </div>
+
             <LineChart
               chartData={userDataEnjoyment}
               options={enjoymentOptions}
@@ -772,6 +785,12 @@ const CardContainer = ({ submissions }: Props) => {
               backgroundColor: "rgba(110, 168, 211, 0.6)",
             }}
           >
+            <div className="tooltip">
+              <i className="fa-solid fa-circle-info"></i>
+              <span className="tooltiptext">
+                This line graph shows sadness trends over time.
+              </span>
+            </div>
             <LineChart chartData={userDataSadness} options={sadnessOptions} />
           </div>
         )}
@@ -784,6 +803,12 @@ const CardContainer = ({ submissions }: Props) => {
               backgroundColor: "rgba(64, 96, 93, 0.6)",
             }}
           >
+            <div className="tooltip">
+              <i className="fa-solid fa-circle-info"></i>
+              <span className="tooltiptext">
+                This line graph shows fear trends over time.
+              </span>
+            </div>
             <LineChart chartData={userDataFear} options={fearOptions} />
           </div>
         )}
@@ -796,6 +821,12 @@ const CardContainer = ({ submissions }: Props) => {
               backgroundColor: "rgba(194, 116, 108, 0.6)",
             }}
           >
+            <div className="tooltip">
+              <i className="fa-solid fa-circle-info"></i>
+              <span className="tooltiptext">
+                This line graph shows anger trends over time.
+              </span>
+            </div>
             <LineChart chartData={userDataAnger} options={angerOptions} />
           </div>
         )}
@@ -808,26 +839,39 @@ const CardContainer = ({ submissions }: Props) => {
               backgroundColor: "rgba(235, 179, 155, 0.6)",
             }}
           >
+            <div className="tooltip">
+              <i className="fa-solid fa-circle-info"></i>
+              <span className="tooltiptext">
+                This line graph shows disgust trends over time.
+              </span>
+            </div>
             <LineChart chartData={userDataDisgust} options={disgustOptions} />
           </div>
         )}
       </div>
+      <h2>Emotional Orientation </h2>
       <div className="radarContainer">
         <div className="radar broad">
-          <RadarChart chartData={radarBroadData} />
           <div className="tooltip">
-            <i className="fa-solid fa-paperclip"></i>
-            <span className="tooltiptext">These radar charts show</span>
+            <i className="fa-solid fa-circle-info"></i>
+            <span className="tooltiptext">
+              Use this chart to get a sense of your overall emotional picture.
+            </span>
           </div>
+          <RadarChart chartData={radarBroadData} />
         </div>
         <div className=" radar specific">
-          <RadarChart chartData={radarSpecificData} />
           <div className="tooltip">
-            <i className="fa-solid fa-paperclip"></i>
-            <span className="tooltiptext">These radar charts show</span>
+            <i className="fa-solid fa-circle-info"></i>
+            <span className="tooltiptext">
+              Use this chart to get an in-depth picture of the intensity of your
+              emotions.
+            </span>
           </div>
+          <RadarChart chartData={radarSpecificData} />
         </div>
       </div>
+      <h2>History</h2>
       {submissions.map((item) => <Card submission={item} />).reverse()}
     </div>
   );

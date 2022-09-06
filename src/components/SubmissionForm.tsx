@@ -113,7 +113,7 @@ const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
                 name="activity"
                 id="activity"
                 cols={20}
-                rows={3}
+                rows={10}
                 value={activity}
                 onChange={(e) => setActivity(e.target.value)}
                 placeholder="Today I ate a banana"
@@ -128,7 +128,7 @@ const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
               name="key-moments"
               id="key-moments"
               cols={20}
-              rows={3}
+              rows={10}
               value={keyMoments}
               onChange={(e) => setKeyMoments(e.target.value)}
               placeholder="Taught my child how to ride a bike"
@@ -142,7 +142,7 @@ const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
               name="hdyfeel"
               id="hdyfeel"
               cols={20}
-              rows={3}
+              rows={10}
               value={hDYFeel}
               onChange={(e) => setHDYFeel(e.target.value)}
               placeholder="Pretty good, I guess"
@@ -151,8 +151,10 @@ const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
         )}
         {counter === 4 && (
           <>
-            <h2> Emotional Mixer</h2>
-            <p>Use the sliders to determine your current emotional levels.</p>
+            <section>
+              <h2> Emotional Mixer</h2>
+              <p>Use the sliders to determine your current emotional levels.</p>
+            </section>
             <div className="form4">
               <div className="sliderColumn enjoymentColumn ">
                 <label htmlFor="satisfaction slider">Satisfaction</label>
@@ -483,9 +485,10 @@ const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
             </div>
           </>
         )}
-        <div>
+        <div className="duelingButtons">
           {counter > 1 && (
             <button
+              className="backBtn"
               type="button"
               onClick={() => setCounter((prev) => prev - 1)}
             >
@@ -494,13 +497,14 @@ const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
           )}
           {counter < 4 && (
             <button
+              className="nxtBtn"
               type="button"
               onClick={() => setCounter((prev) => prev + 1)}
             >
               Next
             </button>
           )}
-          {counter === 4 && <button>Submit</button>}{" "}
+          {counter === 4 && <button className="submitBtn">Submit</button>}{" "}
         </div>
       </div>
     </form>

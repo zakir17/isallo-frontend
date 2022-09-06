@@ -2,10 +2,12 @@
   background-color: rgba(251, 244, 237, 0.7);
   border-radius: 20px;
   padding: 20px 30px;
-  font-size: 22px;
+  font-size: 1.25em;
   color: rgb(32, 69, 74);
-  line-height: 2em;
+  line-height: 1.75em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 55%;
+  max-width: 700px;
 }
 
 .Home {
@@ -15,8 +17,19 @@
 }
 
 .Home button {
-  padding: 15px;
-  border-radius: 10px;
+  margin: 10px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: rgb(244, 218, 193);
   background-color: rgb(32, 69, 74);
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.Home button:hover {
+  background-color: rgb(96, 169, 214);
+  color: rgb(32, 69, 74);
 }

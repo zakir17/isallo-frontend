@@ -1,0 +1,18 @@
+.Main button {
+  margin: 10px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: rgb(244, 218, 193);
+  background-color: rgb(32, 69, 74);
+  padding: 15px 20px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.Main button:hover {
+  background-color: rgb(96, 169, 214);
+  cursor: pointer;
+  color: rgb(32, 69, 74);
+}
