@@ -31,8 +31,10 @@ const Details = () => {
       {submission && (
         <div>
           <div className="textContainer">
-            <h2>Relection</h2>
-            <p>Date: {submission?.date}</p>
+            <div className="detailsHeader">
+              <h2>Daily Reflection</h2>
+              <p>Date: {submission?.date}</p>
+            </div>
             <div className="textInput">
               <p>
                 <span className="textTopics">Activities:</span>{" "}

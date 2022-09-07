@@ -2,8 +2,37 @@
   background-color: rgba(251, 244, 237, 0.7);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 30px;
-  margin: 10px 50px;
+  margin: 15px 0px;
   padding: 30px;
   display: flex;
   justify-content: flex-start;
+  max-width: 1180px;
+  width: 95%;
+  line-height: 1.75em;
+  position: relative;
+}
+.Card .cardDate {
+  font-size: 3em;
+}
+
+.Card button {
+  margin: 10px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9em;
+  color: rgb(244, 218, 193);
+  background-color: rgb(32, 69, 74);
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.Card button:hover {
+  background-color: rgb(96, 169, 214);
+  cursor: pointer;
+  color: rgb(32, 69, 74);
 }

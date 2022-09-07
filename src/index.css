@@ -1,7 +1,10 @@
 /* resets */
 body,
-h1 {
-  margin: 20px;
+h1,
+h2,
+p,
+a {
+  margin: 0px;
   padding: 0;
 }
 
@@ -13,6 +16,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  margin: 20px;
 }
 
 a {
@@ -22,5 +26,10 @@ a {
 
 a:hover {
   cursor: pointer;
+  color: rgb(96, 169, 214);
+}
+
+.textTopics {
+  font-weight: 800;
   color: rgb(96, 169, 214);
 }

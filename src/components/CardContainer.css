@@ -77,6 +77,12 @@
   margin-right: 5px;
 }
 
+.CardContainer .submissionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .CardContainer input[type="checkbox"] {
   accent-color: rgb(96, 169, 214);
 }

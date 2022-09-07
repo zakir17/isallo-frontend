@@ -872,7 +872,9 @@ const CardContainer = ({ submissions }: Props) => {
         </div>
       </div>
       <h2>History</h2>
-      {submissions.map((item) => <Card submission={item} />).reverse()}
+      <div className="submissionContainer">
+        {submissions.map((item) => <Card submission={item} />).reverse()}
+      </div>
     </div>
   );
 };

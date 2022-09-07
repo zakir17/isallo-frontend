@@ -45,12 +45,19 @@ const Card = ({ submission }: Props) => {
     <div className="card">
       <PieChart cardData={cardData} />
       <div>
-        <p>Date: {submission.date}</p>
-        <p>Activities: {submission.activity}</p>
-        <p>How you felt: {submission.hDYFeel}</p>
-        <p>Key Moments: {submission.keyMoments}</p>
+        <p className="cardDate">Date: {submission.date}</p>
+        <p>
+          <span className="textTopics">Activities:</span> {submission.activity}
+        </p>
+        <p>
+          <span className="textTopics">How you felt:</span> {submission.hDYFeel}
+        </p>
+        <p>
+          <span className="textTopics">Key Moments:</span>{" "}
+          {submission.keyMoments}
+        </p>
         <Link to={`/${encodeURIComponent(submission._id!)}/details`}>
-          See more
+          <button>See more</button>
         </Link>
       </div>
     </div>
