@@ -1,19 +1,25 @@
+.Home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Home h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+  margin-top: 125px;
+  margin-bottom: 50px;
+}
 .Home p {
   background-color: rgba(251, 244, 237, 0.7);
   border-radius: 20px;
-  padding: 20px 30px;
+  padding: 30px 35px;
   font-size: 1.25em;
   color: rgb(32, 69, 74);
   line-height: 1.75em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 55%;
-  max-width: 700px;
-}
-
-.Home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 600px;
+  margin-bottom: 30px;
 }
 
 .Home button {
@@ -32,4 +38,5 @@
 .Home button:hover {
   background-color: rgb(96, 169, 214);
   color: rgb(32, 69, 74);
+  cursor: pointer;
 }

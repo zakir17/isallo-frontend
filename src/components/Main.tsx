@@ -33,11 +33,28 @@ const Main = () => {
 
   return (
     <div className="Main">
-      {seeForm ? (
-        <button onClick={() => setSeeForm(false)}>Open Journal</button>
-      ) : (
-        <button onClick={() => setSeeForm(true)}>Add Entry</button>
-      )}
+      <div className="journeyContainer">
+        {seeForm ? (
+          <>
+            <h2>Your Entry</h2>
+            <button className="ReturnToJBtn" onClick={() => setSeeForm(false)}>
+              Return to Journal
+            </button>
+          </>
+        ) : (
+          <>
+            <h2>My Journey</h2>
+            <div className="myJourneyP">
+              <p>
+                Use this page to add entries to your journal, access past
+                entries individually, and evaluate your emotions. View entries
+                below or...
+              </p>
+              <button onClick={() => setSeeForm(true)}>Add Entry</button>
+            </div>
+          </>
+        )}
+      </div>
 
       {seeForm ? (
         <SubmissionForm onAdd={submitSubmission} setSeeForm={setSeeForm} />

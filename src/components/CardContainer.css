@@ -11,7 +11,7 @@
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 10px;
   position: absolute;
   z-index: 1;
   bottom: 125%;
@@ -35,6 +35,13 @@
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+.CardContainer h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+  margin-top: 85px;
+  margin-bottom: 30px;
 }
 
 .CardContainer .lineGraphsContainer {
@@ -64,6 +71,16 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 30px;
   margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.CardContainer .radar .tooltip {
+  position: absolute;
+  top: 30px;
+  left: 20px;
 }
 
 .CardContainer .checkboxContainer {
@@ -85,6 +102,10 @@
 
 .CardContainer input[type="checkbox"] {
   accent-color: rgb(96, 169, 214);
+}
+
+.CardContainer input {
+  cursor: pointer;
 }
 
 .CardContainer h2 {

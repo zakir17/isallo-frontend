@@ -42,9 +42,9 @@ const Card = ({ submission }: Props) => {
   const cardData = [enjoyment, sadness, fear, anger, disgust];
 
   return (
-    <div className="card">
+    <div className="Card">
       <PieChart cardData={cardData} />
-      <div>
+      <div className="cardInfo">
         <p className="cardDate">Date: {submission.date}</p>
         <p>
           <span className="textTopics">Activities:</span> {submission.activity}
@@ -57,7 +57,7 @@ const Card = ({ submission }: Props) => {
           {submission.keyMoments}
         </p>
         <Link to={`/${encodeURIComponent(submission._id!)}/details`}>
-          <button>See more</button>
+          <button className="cardBtn">See more</button>
         </Link>
       </div>
     </div>

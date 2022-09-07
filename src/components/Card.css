@@ -1,4 +1,4 @@
-.card {
+.Card {
   background-color: rgba(251, 244, 237, 0.7);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 30px;
@@ -12,27 +12,16 @@
   position: relative;
 }
 .Card .cardDate {
-  font-size: 3em;
+  font-size: 1.35em;
+  margin-bottom: 10px;
 }
 
-.Card button {
-  margin: 10px;
-  font-family: inherit;
-  font-weight: 600;
-  font-size: 0.9em;
-  color: rgb(244, 218, 193);
-  background-color: rgb(32, 69, 74);
+.Card .cardBtn {
+  position: absolute !important;
+  right: 20px;
+  bottom: 20px;
   padding: 10px 15px;
-  border: 0;
-  border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
 }
-
-.Card button:hover {
-  background-color: rgb(96, 169, 214);
-  cursor: pointer;
-  color: rgb(32, 69, 74);
+.Card .cardInfo {
+  margin-left: 20px;
 }

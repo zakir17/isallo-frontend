@@ -593,8 +593,8 @@ const CardContainer = ({ submissions }: Props) => {
           angerTotal / submissions.length,
           disgustTotal / submissions.length,
         ],
-        backgroundColor: "rgba(255, 99, 132, 0.2)",
-        borderColor: "rgba(255, 99, 132, 1)",
+        backgroundColor: "rgba(110, 168, 211, 0.4)",
+        borderColor: "rgba(110, 168, 211, 1)",
         borderWidth: 1,
       },
       {
@@ -606,12 +606,46 @@ const CardContainer = ({ submissions }: Props) => {
           angerTotal,
           disgustTotal,
         ],
-        backgroundColor: "rgba(255, 99, 50, 0.2)",
-        borderColor: "rgba(255, 99, 75, 1)",
+        backgroundColor: "rgba(235, 179, 155, 0.3)",
+        borderColor: "rgba(194, 116, 108, 1)",
         borderWidth: 1,
       },
     ],
   };
+  const radarOptions = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top" as const,
+        labels: {
+          color: "black",
+          font: {
+            size: 12,
+            family: "'Comfortaa', cursive",
+          },
+        },
+      },
+      title: {
+        display: true,
+        text: "Disgust",
+        color: "black",
+        font: {
+          size: 20,
+          family: "'Comfortaa', cursive",
+        },
+      },
+    },
+    scales: {
+      r: {
+        color: "black",
+        font: {
+          size: 10,
+          family: "'Comfortaa', cursive",
+        },
+      },
+    },
+  };
+
   const radarSpecificData = {
     labels: [
       "Satisfaction",
@@ -660,8 +694,8 @@ const CardContainer = ({ submissions }: Props) => {
           offendedTotal(submissions) / submissions.length,
           disturbedTotal(submissions) / submissions.length,
         ],
-        backgroundColor: "rgba(255, 99, 132, 0.2)",
-        borderColor: "rgba(255, 99, 132, 1)",
+        backgroundColor: "rgba(110, 168, 211, 0.4)",
+        borderColor: "rgba(110, 168, 211, 1)",
         borderWidth: 1,
       },
       {
@@ -688,8 +722,8 @@ const CardContainer = ({ submissions }: Props) => {
           offendedTotal(submissions),
           disturbedTotal(submissions),
         ],
-        backgroundColor: "rgba(255, 99, 50, 0.2)",
-        borderColor: "rgba(255, 99, 75, 1)",
+        backgroundColor: "rgba(235, 179, 155, 0.3)",
+        borderColor: "rgba(194, 116, 108, 1)",
         borderWidth: 1,
       },
     ],
@@ -858,7 +892,7 @@ const CardContainer = ({ submissions }: Props) => {
               Use this chart to get a sense of your overall emotional picture.
             </span>
           </div>
-          <RadarChart chartData={radarBroadData} />
+          <RadarChart chartData={radarBroadData} options={radarOptions} />
         </div>
         <div className=" radar specific">
           <div className="tooltip">
@@ -868,7 +902,7 @@ const CardContainer = ({ submissions }: Props) => {
               emotions.
             </span>
           </div>
-          <RadarChart chartData={radarSpecificData} />
+          <RadarChart chartData={radarSpecificData} options={radarOptions} />
         </div>
       </div>
       <h2>History</h2>

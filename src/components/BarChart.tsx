@@ -83,6 +83,11 @@ const BarChart = ({ chartData }: Props) => {
               display: false,
             },
           },
+          scales: {
+            y: {
+              max: 10,
+            },
+          },
         }}
       ></Bar>
     </div>

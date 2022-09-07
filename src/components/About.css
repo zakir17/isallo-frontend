@@ -1,0 +1,54 @@
+.About {
+  margin-top: 85px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.About h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.About .mission {
+  background-color: rgba(251, 244, 237, 0.7);
+  border-radius: 20px;
+  padding: 30px 35px;
+  font-size: 1.25em;
+  color: rgb(32, 69, 74);
+  line-height: 1.75em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 55%;
+  max-width: 700px;
+}
+
+.About .team1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.About .teamCard {
+  background-color: rgba(251, 244, 237, 0.7);
+  border-radius: 20px;
+  padding: 30px 35px;
+  font-size: 1.25em;
+  color: rgb(32, 69, 74);
+  line-height: 1.75em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 55%;
+  max-width: 700px;
+  margin: 20px;
+}
+.About img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 1200px) {
+  .About .team1 {
+    /* flex-direction: row; */
+  }
+  .About .teamCard {
+  }
+}

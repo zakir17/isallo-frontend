@@ -97,7 +97,7 @@ const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
         {counter === 1 && (
           <>
             <div className="form1">
-              <div>
+              <div className="dateBox">
                 <label htmlFor="date">Date</label>
                 <input
                   type="date"
@@ -116,7 +116,7 @@ const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
                 rows={10}
                 value={activity}
                 onChange={(e) => setActivity(e.target.value)}
-                placeholder="Today I ate a banana"
+                placeholder="Talk bout the actions you took today. What did you accomplish at work, at home, etc?"
               />
             </div>
           </>
@@ -131,7 +131,7 @@ const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
               rows={10}
               value={keyMoments}
               onChange={(e) => setKeyMoments(e.target.value)}
-              placeholder="Taught my child how to ride a bike"
+              placeholder="Talk about the most impactful moments in your day. These can include, highlights, lowlights, or anything in-between."
             />
           </div>
         )}
@@ -145,14 +145,15 @@ const SubmissionForm = ({ onAdd, setSeeForm }: Props) => {
               rows={10}
               value={hDYFeel}
               onChange={(e) => setHDYFeel(e.target.value)}
-              placeholder="Pretty good, I guess"
+              placeholder="To begin, take a moment to notice your surroundings. What sounds do you hear? What sights do you see? What fragrances fill the air? Now, with your eyes closed, take five deep breaths — in through your nose, let your belly rise, and release your breath, along with any thoughts that keep you from the present.
+              "
             />
           </div>
         )}
         {counter === 4 && (
           <>
             <section>
-              <h2> Emotional Mixer</h2>
+              <h3> Emotional Mixer</h3>
               <p>Use the sliders to determine your current emotional levels.</p>
             </section>
             <div className="form4">

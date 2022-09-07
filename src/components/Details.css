@@ -80,12 +80,12 @@
   flex-direction: column;
   max-width: 1060px;
   width: 95%;
-  align-items: left;
+  align-items: center;
 }
 .Details .detailsHeader h2 {
   font-size: 2.25em;
   font-weight: 700;
-  margin-top: 100px;
+  margin-top: 85px;
   margin-bottom: 30px;
 }
 .Details .detailsHeader p {
@@ -115,6 +115,7 @@
 .Details button:hover {
   background-color: rgb(96, 169, 214);
   color: rgb(32, 69, 74);
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {

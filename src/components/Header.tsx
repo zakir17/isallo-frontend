@@ -39,16 +39,18 @@ const Header = () => {
                 <Link to="/about-us">About</Link>
               </li>
               <li>
-                <Link to="/main">Journey</Link>
+                <Link to="/main">My Journey</Link>
               </li>
               <li>
                 <Link to="/">Home</Link>
               </li>
-              {user ? (
-                <a onClick={() => signOut()}>Sign out</a>
-              ) : (
-                <a onClick={() => signInWithGoogle()}>Sign in</a>
-              )}
+              <li>
+                {user ? (
+                  <a onClick={() => signOut()}>Sign out</a>
+                ) : (
+                  <a onClick={() => signInWithGoogle()}>Sign in</a>
+                )}
+              </li>
             </ul>
           ) : (
             ""

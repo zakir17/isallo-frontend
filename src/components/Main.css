@@ -16,3 +16,53 @@
   cursor: pointer;
   color: rgb(32, 69, 74);
 }
+
+.Main h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+  margin-top: 85px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.Main p {
+  text-align: left;
+  margin: 20px;
+}
+
+.Main .myJourneyP {
+  background-color: rgba(251, 244, 237, 0.7);
+  border-radius: 20px;
+  padding: 30px 35px;
+  font-size: 1.25em;
+  color: rgb(32, 69, 74);
+  line-height: 1.75em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 55%;
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Main .journeyContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Main .ReturnToJBtn {
+  position: fixed;
+  bottom: 20px;
+  opacity: 0.6;
+}
+
+.Main .ReturnToJBtn:hover {
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .Main .ReturnToJBtn {
+    opacity: 1;
+  }
+}

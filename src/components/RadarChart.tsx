@@ -13,6 +13,7 @@ import Submission from "../models/Submission";
 
 interface Props {
   chartData: any;
+  options: any;
 }
 
 ChartJS.register(
@@ -24,10 +25,10 @@ ChartJS.register(
   Legend
 );
 
-const PieChart = ({ chartData }: Props) => {
+const PieChart = ({ chartData, options }: Props) => {
   return (
     <div style={{ width: "500px" }}>
-      <Radar data={chartData}></Radar>
+      <Radar data={chartData} options={options}></Radar>
     </div>
   );
 };

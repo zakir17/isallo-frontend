@@ -1,0 +1,65 @@
+.Resources {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Resources h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+  margin-top: 85px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.Resources .glossary {
+  background-color: rgba(251, 244, 237, 0.7);
+  border-radius: 20px;
+  padding: 40px 45px;
+  color: rgb(32, 69, 74);
+  line-height: 2em;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 75%;
+  max-width: 700px;
+}
+
+.Resources span {
+  font-weight: 700;
+  font-size: 1.125em;
+}
+
+.Resources .circle {
+  border-radius: 50%;
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+}
+
+.Resources .enjoyment {
+  background-color: rgb(243, 231, 165);
+  border: 2px solid rgb(215, 160, 30);
+  width: 9px;
+  height: 9px;
+}
+.Resources .sadness {
+  background-color: rgb(110, 168, 211);
+}
+.Resources .anger {
+  background-color: rgb(194, 116, 108);
+}
+.Resources .disgust {
+  background-color: rgb(235, 179, 155);
+  border: 2px solid rgb(194, 116, 108);
+  width: 9px;
+  height: 9px;
+}
+.Resources .fear {
+  background-color: rgb(64, 96, 93);
+}
+.Resources .legend {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 1.125em;
+}
