@@ -10,7 +10,9 @@
   width: 95%;
   line-height: 1.75em;
   position: relative;
+  align-items: center;
 }
+
 .Card .cardDate {
   font-size: 1.35em;
   margin-bottom: 10px;

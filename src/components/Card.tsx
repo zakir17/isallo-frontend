@@ -40,10 +40,28 @@ const Card = ({ submission }: Props) => {
     submission.disturbed;
 
   const cardData = [enjoyment, sadness, fear, anger, disgust];
-
+  const pieChartOptions = {
+    responsive: true,
+    maintainAspectRatio: true,
+    plugins: {
+      legend: {
+        position: "bottom" as const,
+        labels: {
+          color: "black",
+          font: {
+            size: 11,
+            family: "'Comfortaa', cursive",
+            weight: 700,
+          },
+        },
+      },
+    },
+  };
   return (
     <div className="Card">
-      <PieChart cardData={cardData} />
+      <div className="piechart">
+        <PieChart cardData={cardData} options={pieChartOptions} />
+      </div>
       <div className="cardInfo">
         <p className="cardDate">Date: {submission.date}</p>
         <p>

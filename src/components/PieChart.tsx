@@ -2,8 +2,9 @@ import "./PieChart.css";
 import { Pie } from "react-chartjs-2";
 interface Props {
   cardData: number[];
+  options: any;
 }
-const PieChart = ({ cardData }: Props) => {
+const PieChart = ({ cardData, options }: Props) => {
   const userData = {
     labels: ["enjoyment", "sadness", "fear", "anger", "disgust"],
     datasets: [
@@ -22,13 +23,7 @@ const PieChart = ({ cardData }: Props) => {
   };
   return (
     <div style={{ width: "200px", height: "200px" }}>
-      <Pie
-        data={userData}
-        options={{
-          responsive: true,
-          maintainAspectRatio: true,
-        }}
-      ></Pie>
+      <Pie data={userData} options={options}></Pie>
     </div>
   );
 };

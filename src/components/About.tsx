@@ -14,45 +14,66 @@ const About = () => {
         our experiences, and evaluating our emotional trends over time, we open
         the door for the true evolution of self.
       </p>
-      <h2>Meet the Team</h2>
+      <h2 className="meetH2">Meet the Team</h2>
       <div className="team1">
         <section className="teamCard">
-          <h3>Max Maciag</h3> <img src={Max} alt="Max" />
+          <img src={Max} alt="Max" />
+          <div className="linkandname">
+            <h3>
+              Max Maciag
+              <a href="https://www.linkedin.com/in/max-maciag" target="_blank">
+                <i className="fa-brands fa-linkedin"></i>
+              </a>
+            </h3>
+          </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-            voluptates, modi, recusandae eius rem nemo ipsam assumenda odit
-            iusto at quas delectus eum deleniti quos explicabo a veritatis
-            molestiae beatae?
+            Max graduated from a Grand Circus front end bootcamp in September
+            2022. Max worked at a contract material testing lab prior to
+            transitioning to the tech industry. He is a prominent community
+            figure in the Super Smash Brothers Melee competitive scene within
+            Michigan and is currently ranked top 5 in the state.
           </p>
-          <a href="https://www.linkedin.com/in/max-maciag">
-            <i className="fa-brands fa-linkedin"></i>
-          </a>
         </section>
         <section className="teamCard">
-          <h3>Raime Lee Cronkhite</h3>
-          <img src={Raime} alt="Ramie" />
+          <img src={Raime} alt="Raime" />
+          <div className="linkandname">
+            <h3>
+              Raime Lee
+              <a href="https://www.linkedin.com/in/raimelee" target="_blank">
+                <i className="fa-brands fa-linkedin"></i>
+              </a>
+            </h3>
+          </div>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Architecto, aperiam reprehenderit itaque assumenda voluptatibus
-            dignissimos eligendi? Quisquam ex fugiat dolore doloribus eveniet
-            odit laudantium, vero laboriosam voluptatibus, sapiente non dolorum!
+            Raime is a full stack MERN developer and a classically-trained,
+            award-winning artist. Outside of the studio, she constantly explores
+            global cultures, philosophy, psychology, and art history and
+            continually seeks out in-depth conversations about the emotional
+            depths within and the contexts in which humanity resides. She loves
+            taking long walks with her fiancé, Andrew, and their dog, Kumo.
           </p>
-          <a href="www.linkedin.com/in/raimelee">
-            <i className="fa-brands fa-linkedin"></i>
-          </a>
         </section>
         <section className="teamCard">
-          <h3>Zakir Hussain</h3>
           <img src={Zakir} alt="zakir" />
+          <div className="linkandname">
+            <h3>
+              Zakir Hussain
+              <a
+                href="https://www.linkedin.com/in/zakir-hussain17/"
+                target="_blank"
+              >
+                <i className="fa-brands fa-linkedin"></i>
+              </a>
+            </h3>
+          </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
-            numquam consequuntur ad beatae. Consequatur officia pariatur commodi
-            enim dicta explicabo maiores officiis eius similique, impedit ad
-            ullam perspiciatis possimus qui.
+            Bangladesh-born and Detroit-raised, Zakir hopes to build a better
+            tomorrow. Previously in the medical, financial and non-profit
+            industries, Zakir now is stepping into the tech space to build more
+            meaningful products. Some of his interests include sports,
+            technology, and astronomy. He also enjoys listening to music,
+            playing video games and out door activities.
           </p>
-          <a href="https://www.linkedin.com/in/zakir-hussain17/">
-            <i className="fa-brands fa-linkedin"></i>
-          </a>
         </section>
       </div>
     </div>
