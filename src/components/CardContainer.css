@@ -55,6 +55,13 @@
   padding: 30px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: relative;
+}
+
+.CardContainer .linegraph .tooltip {
+  position: absolute;
+  top: 30px;
+  left: 20px;
 }
 
 .CardContainer .radarContainer {
@@ -87,6 +94,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 .CardContainer .checkboxContainer input,
 .tooltip {

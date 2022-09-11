@@ -1,6 +1,6 @@
 .Header img {
   height: auto;
-  width: 150px;
+  width: 40%;
   display: inline-block;
 }
 
@@ -8,20 +8,34 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0px 10px;
 }
 
 .Header ul {
   list-style: none;
   position: absolute;
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  right: 80px;
-  top: 25px;
+  justify-content: space-evenly;
+  flex-direction: column;
+  top: 60px;
+  right: 10px;
+  font-size: 75%;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+@keyframes example {
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+    right: 10px;
+    top: 10px;
+  }
 }
 .Header ul li,
 a {
   margin-left: 10px;
+  margin-bottom: 3px;
 }
 
 .Header .fa-bars {
@@ -37,4 +51,18 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .Header ul {
+    justify-content: space-between;
+    flex-direction: row;
+    right: 80px;
+    top: 25px;
+  }
+
+  @keyframes example {
+    0% {
+      background-color: rgba(0, 0, 0, 0);
+      right: 10px;
+      top: 25px;
+    }
+  }
 }
