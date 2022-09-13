@@ -77,6 +77,8 @@ p {
   border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: rgba(251, 244, 237, 0.5);
+  margin: 0px 20px;
+  align-items: center;
 }
 
 .SubmissionForm h3 {
@@ -101,7 +103,8 @@ p {
   display: flex;
   flex-direction: column;
   margin: 20px;
-  width: 300px;
+  width: 75%;
+  max-width: 400px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 30px 25px 25px 25px;
   border-radius: 20px;
@@ -127,7 +130,7 @@ p {
   width: 55%;
   max-width: 700px;
   position: relative;
-  min-width: 450px;
+  min-width: 320px;
 }
 .SubmissionForm .duelingButtons .nxtBtn {
   position: absolute;
@@ -168,13 +171,20 @@ p {
   margin-bottom: 20px;
 }
 
-@media screen and (min-width: 768px) {
+.SubmissionForm {
+  padding-bottom: 150px;
+}
+
+@media screen and (min-width: 1200px) {
   .SubmissionForm .form4 {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
     max-width: 1200px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
+  /* 
+  .SubmissionForm .form4 .sliderColumn {
+    width: 400px;
+  } */
 }

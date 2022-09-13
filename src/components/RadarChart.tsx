@@ -27,8 +27,13 @@ ChartJS.register(
 
 const PieChart = ({ chartData, options }: Props) => {
   return (
-    <div style={{ width: "500px" }}>
-      <Radar data={chartData} options={options}></Radar>
+    <div style={{ width: "100%" }}>
+      <Radar
+        data={chartData}
+        options={options}
+        width={"80%"}
+        height={"80%"}
+      ></Radar>
     </div>
   );
 };

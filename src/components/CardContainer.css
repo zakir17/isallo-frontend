@@ -52,10 +52,11 @@
 
 .CardContainer .linegraph {
   margin: 10px;
-  padding: 30px;
+  padding: 30px 20px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   position: relative;
+  min-width: 320px;
 }
 
 .CardContainer .linegraph .tooltip {
@@ -73,7 +74,9 @@
 
 .CardContainer .radar {
   padding: 30px;
-  width: 550px;
+  width: 85%;
+  max-width: 550px;
+
   background-color: rgba(251, 244, 237, 0.7);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 30px;
@@ -127,5 +130,13 @@
 @media screen and (min-width: 1200px) {
   .CardContainer .radarContainer {
     flex-direction: row;
+  }
+
+  .CardContainer .linegraph {
+    min-width: 550px;
+  }
+
+  .CardContainer .radar {
+    width: 550px;
   }
 }

@@ -28,7 +28,12 @@ ChartJS.register(
 const LineChart = ({ chartData, options }: Props) => {
   return (
     <div>
-      <Line data={chartData} options={options}></Line>
+      <Line
+        data={chartData}
+        options={options}
+        width={"85%"}
+        height={"65%"}
+      ></Line>
     </div>
   );
 };

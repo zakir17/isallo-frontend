@@ -13,7 +13,7 @@ interface Props {
 const CardContainer = ({ submissions }: Props) => {
   const enjoymentOptions = {
     responsive: true,
-    maintainAspectRatio: true,
+    // maintainAspectRatio: true,
     plugins: {
       legend: {
         position: "top" as const,
@@ -798,11 +798,11 @@ const CardContainer = ({ submissions }: Props) => {
           <div
             className="linegraph"
             style={{
-              width: "95%",
-              // // height: "85%",
-              // maxHeight: "300px",
-              minWidth: "250px",
-              maxWidth: "550px",
+              // width: "95%",
+              // // // height: "85%",
+              // // maxHeight: "300px",
+              // minWidth: "250px",
+              // maxWidth: "550px",
               backgroundColor: "rgba(243, 231, 165, 0.6)",
             }}
           >
@@ -823,11 +823,11 @@ const CardContainer = ({ submissions }: Props) => {
           <div
             className="linegraph"
             style={{
-              width: "95%",
-              // // height: "85%",
-              // maxHeight: "300px",
-              minWidth: "250px",
-              maxWidth: "550px",
+              // width: "95%",
+              // // // height: "85%",
+              // // maxHeight: "300px",
+              // minWidth: "250px",
+              // maxWidth: "550px",
               backgroundColor: "rgba(110, 168, 211, 0.6)",
             }}
           >
@@ -844,11 +844,11 @@ const CardContainer = ({ submissions }: Props) => {
           <div
             className="linegraph"
             style={{
-              width: "95%",
-              // // height: "85%",
-              // maxHeight: "300px",
-              minWidth: "250px",
-              maxWidth: "550px",
+              // width: "95%",
+              // // // height: "85%",
+              // // maxHeight: "300px",
+              // minWidth: "250px",
+              // maxWidth: "550px",
               backgroundColor: "rgba(64, 96, 93, 0.6)",
             }}
           >
@@ -865,11 +865,11 @@ const CardContainer = ({ submissions }: Props) => {
           <div
             className="linegraph"
             style={{
-              width: "95%",
-              // // height: "85%",
-              // maxHeight: "300px",
-              minWidth: "250px",
-              maxWidth: "550px",
+              // width: "95%",
+              // // // height: "85%",
+              // // maxHeight: "300px",
+              // minWidth: "250px",
+              // maxWidth: "550px",
               backgroundColor: "rgba(194, 116, 108, 0.6)",
             }}
           >
@@ -886,11 +886,11 @@ const CardContainer = ({ submissions }: Props) => {
           <div
             className="linegraph"
             style={{
-              width: "95%",
-              // // height: "85%",
-              // maxHeight: "300px",
-              minWidth: "250px",
-              maxWidth: "550px",
+              // width: "95%",
+              // // // height: "85%",
+              // // maxHeight: "300px",
+              // minWidth: "250px",
+              // maxWidth: "550px",
               backgroundColor: "rgba(235, 179, 155, 0.6)",
             }}
           >

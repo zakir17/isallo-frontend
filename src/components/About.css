@@ -20,7 +20,7 @@
   color: rgb(32, 69, 74);
   line-height: 1.75em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  width: 75%;
+  /* width: 75%; */
   max-width: 1000px;
 }
 .About .meetH2 {

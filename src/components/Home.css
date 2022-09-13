@@ -18,6 +18,7 @@
   line-height: 1.75em;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   width: 55%;
+  min-width: 300px;
   max-width: 600px;
   margin-bottom: 30px;
 }
